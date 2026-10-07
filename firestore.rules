@@ -1,0 +1,49 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // User Profile
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+
+      // Farm parcels belonging to the user
+      match /farms/{farmId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // Crop diagnosis scans
+      match /diagnoses/{diagnosisId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // Treatment application logs
+      match /treatments/{treatmentId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // Saved favorite pesticides & remedies
+      match /favorites/{favoriteId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // Farm Fitness Score & Streaks progress
+      match /gamification/{scoreId} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+  }
+}

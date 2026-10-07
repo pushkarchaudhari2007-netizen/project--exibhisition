@@ -1,0 +1,132 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile containing authentication details, preferred language, role, and farm settings.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "email": { "type": "string", "description": "User email address" },
+        "displayName": { "type": "string", "description": "Farmer or extension worker full name" },
+        "role": { "type": "string", "enum": ["farmer", "extension_worker"], "description": "User role" },
+        "villageId": { "type": "string", "description": "Village identifier" },
+        "languagePref": { "type": "string", "enum": ["hi", "mr", "te", "ta", "kn", "pa", "en"], "description": "Preferred language" },
+        "phoneNumber": { "type": "string", "description": "Contact phone number" },
+        "consentHealthData": { "type": "boolean", "description": "Consent for heat stress tracking" },
+        "consentLeaderboardPublic": { "type": "boolean", "description": "Consent for village leaderboard" },
+        "createdAt": { "type": "string", "description": "Creation ISO timestamp" },
+        "updatedAt": { "type": "string", "description": "Last updated ISO timestamp" }
+      },
+      "required": ["uid", "email", "displayName", "role"]
+    },
+    "Farm": {
+      "title": "Farm",
+      "description": "Farm parcel details owned by the farmer.",
+      "type": "object",
+      "properties": {
+        "farmId": { "type": "string", "description": "Unique farm parcel ID" },
+        "ownerUid": { "type": "string", "description": "Owner Firebase UID" },
+        "cropTypes": { "type": "string", "description": "Comma separated crop names" },
+        "acreage": { "type": "number", "description": "Farm parcel size in acres" },
+        "soilType": { "type": "string", "description": "Soil profile description" },
+        "lat": { "type": "number", "description": "Latitude coordinate" },
+        "lng": { "type": "number", "description": "Longitude coordinate" },
+        "updatedAt": { "type": "string", "description": "Last updated timestamp" }
+      },
+      "required": ["farmId", "ownerUid", "acreage"]
+    },
+    "DiagnosisRecord": {
+      "title": "DiagnosisRecord",
+      "description": "Crop pest and disease diagnosis record saved to the user account.",
+      "type": "object",
+      "properties": {
+        "diagnosisId": { "type": "string", "description": "Diagnosis record ID" },
+        "userUid": { "type": "string", "description": "Author UID" },
+        "farmId": { "type": "string", "description": "Associated farm parcel ID" },
+        "cropType": { "type": "string", "description": "Crop category" },
+        "predictedLabel": { "type": "string", "description": "Predicted disease or pest label" },
+        "confidenceScore": { "type": "number", "description": "Confidence score 0.0 to 1.0" },
+        "confidenceTier": { "type": "string", "enum": ["high", "likely", "low"] },
+        "imageUrl": { "type": "string", "description": "Leaf photo snapshot URL" },
+        "hariyaExplanation": { "type": "string", "description": "Spoken explanation" },
+        "lat": { "type": "number", "description": "Geotagged latitude" },
+        "lng": { "type": "number", "description": "Geotagged longitude" },
+        "createdAt": { "type": "string", "description": "Timestamp created" }
+      },
+      "required": ["diagnosisId", "userUid", "cropType", "predictedLabel", "confidenceScore"]
+    },
+    "TreatmentRecord": {
+      "title": "TreatmentRecord",
+      "description": "Treatment logged by farmer to earn Farm Fitness score.",
+      "type": "object",
+      "properties": {
+        "treatmentId": { "type": "string", "description": "Treatment ID" },
+        "userUid": { "type": "string", "description": "Farmer UID" },
+        "farmId": { "type": "string", "description": "Farm ID" },
+        "diagnosisId": { "type": "string", "description": "Related diagnosis ID" },
+        "treatmentType": { "type": "string", "enum": ["organic", "chemical", "cultural"] },
+        "productUsed": { "type": "string", "description": "Product formulation name" },
+        "appliedAt": { "type": "string", "description": "Applied timestamp" },
+        "markedComplete": { "type": "boolean", "description": "Completion state" }
+      },
+      "required": ["treatmentId", "userUid", "treatmentType", "productUsed"]
+    },
+    "FavoriteProduct": {
+      "title": "FavoriteProduct",
+      "description": "Bookmarked treatment product for quick offline reference.",
+      "type": "object",
+      "properties": {
+        "userUid": { "type": "string", "description": "User UID" },
+        "productId": { "type": "string", "description": "Product catalog ID" },
+        "productName": { "type": "string", "description": "Product display name" },
+        "activeIngredient": { "type": "string", "description": "Active chemical or biological agent" },
+        "dosage": { "type": "string", "description": "Recommended dosage" },
+        "savedAt": { "type": "string", "description": "Saved timestamp" }
+      },
+      "required": ["userUid", "productId"]
+    },
+    "GamificationScore": {
+      "title": "GamificationScore",
+      "description": "Farmer's calculated Farm Fitness Score and streaks.",
+      "type": "object",
+      "properties": {
+        "userUid": { "type": "string", "description": "User UID" },
+        "farmFitnessScoreTotal": { "type": "number", "description": "Overall score 0-100" },
+        "streakEcoDays": { "type": "number", "description": "Consecutive days using eco remedies" },
+        "pesticideReductionScore": { "type": "number", "description": "Score 0-100" },
+        "soilHealthScore": { "type": "number", "description": "Score 0-100" },
+        "waterEfficiencyScore": { "type": "number", "description": "Score 0-100" },
+        "healthComplianceScore": { "type": "number", "description": "Score 0-100" },
+        "followthroughScore": { "type": "number", "description": "Score 0-100" },
+        "updatedAt": { "type": "string", "description": "Last updated" }
+      },
+      "required": ["userUid", "farmFitnessScoreTotal"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "entities.UserProfile" },
+      "description": "User accounts and profile metadata."
+    },
+    "/users/{userId}/farms/{farmId}": {
+      "schema": { "$ref": "entities.Farm" },
+      "description": "User farm parcels."
+    },
+    "/users/{userId}/diagnoses/{diagnosisId}": {
+      "schema": { "$ref": "entities.DiagnosisRecord" },
+      "description": "User crop disease diagnoses history."
+    },
+    "/users/{userId}/treatments/{treatmentId}": {
+      "schema": { "$ref": "entities.TreatmentRecord" },
+      "description": "User treatment application logs."
+    },
+    "/users/{userId}/favorites/{favoriteId}": {
+      "schema": { "$ref": "entities.FavoriteProduct" },
+      "description": "User saved favorite pesticides and bio remedies."
+    },
+    "/users/{userId}/gamification/{scoreId}": {
+      "schema": { "$ref": "entities.GamificationScore" },
+      "description": "User farm fitness score progress."
+    }
+  }
+}

@@ -1,0 +1,416 @@
+{
+  "version": "1.0.0",
+  "model_architecture": "MobileNetV3-Small-INT8",
+  "num_classes": 24,
+  "input_resolution": [224, 224, 3],
+  "classes": [
+    {
+      "class_id": 0,
+      "crop": "cotton",
+      "disease": "pink_bollworm",
+      "scientific_name": "Pectinophora gossypiella",
+      "display_name": "Pink Bollworm",
+      "category": "pest",
+      "language_keys": {
+        "en": "Pink Bollworm",
+        "hi": "गुलाबी सुंडी (पिंक बॉलवर्म)",
+        "mr": "गुलाबी बोंडअळी",
+        "te": "గులాబీ రంగు కాయ తొలుచు పురుగు",
+        "ta": "இளஞ்சிவப்பு காய்ப்புழு",
+        "kn": "ಗುಲಾಬಿ ಕಾಯಿ ಕೊರೆಯುವ ಹುಳು",
+        "pa": "ਗੁਲਾਬੀ ਸੁੰਡੀ"
+      }
+    },
+    {
+      "class_id": 1,
+      "crop": "cotton",
+      "disease": "bacterial_blight",
+      "scientific_name": "Xanthomonas citri pv. malvacearum",
+      "display_name": "Cotton Bacterial Blight",
+      "category": "disease",
+      "language_keys": {
+        "en": "Bacterial Blight / Angular Leaf Spot",
+        "hi": "जीवाणु झुलसा (बैक्टीरियल ब्लाइट)",
+        "mr": "जिवाणू करपा (अँगुलेर लीफ स्पॉट)",
+        "te": "బ్యాక్టీరియల్ ఆకుమచ్చ తెగులు",
+        "ta": "பாக்டீரியா இலைக்கருகல்",
+        "kn": "ದುಂಡಾಣು ಎಲೆಚುಕ್ಕೆ ರೋಗ",
+        "pa": "ਜੀਵਾਣੂ ਝੁਲਸ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 2,
+      "crop": "cotton",
+      "disease": "healthy",
+      "scientific_name": "Gossypium hirsutum",
+      "display_name": "Healthy Cotton Foliage",
+      "category": "healthy",
+      "language_keys": {
+        "en": "Healthy Cotton",
+        "hi": "स्वस्थ कपास पत्ती",
+        "mr": "निरोगी कापूस पान",
+        "te": "ఆరోగ్యకరమైన పత్తి ఆకు",
+        "ta": "ஆரோக்கியமான பருத்தி இலை",
+        "kn": "ಆರೋಗ್ಯಕರ ಹತ್ತಿ ಎಲೆ",
+        "pa": "ਤੰਦਰੁਸਤ ਨਰਮਾ"
+      }
+    },
+    {
+      "class_id": 3,
+      "crop": "rice",
+      "disease": "rice_blast",
+      "scientific_name": "Magnaporthe oryzae",
+      "display_name": "Rice Blast",
+      "category": "disease",
+      "language_keys": {
+        "en": "Rice Blast (Foliar)",
+        "hi": "धान का झोंका रोग (राइस ब्लास्ट)",
+        "mr": "भातावरील करपा (राईस ब्लास्ट)",
+        "te": "వరి అగ్గితెగులు",
+        "ta": "நெல் குலை நோய்",
+        "kn": "ಭತ್ತದ ಬೆಂಕಿ ರೋಗ",
+        "pa": "ਝੋਨੇ ਦਾ ਝੁਲਸ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 4,
+      "crop": "rice",
+      "disease": "brown_spot",
+      "scientific_name": "Bipolaris oryzae",
+      "display_name": "Rice Brown Spot",
+      "category": "disease",
+      "language_keys": {
+        "en": "Rice Brown Spot",
+        "hi": "धान का भूरा धब्बा रोग",
+        "mr": "भातावरील तपकिरी ठिपके",
+        "te": "వరి గోధుమ రంగు మచ్చ తెగులు",
+        "ta": "நெல் பழுப்பு புள்ளி நோய்",
+        "kn": "ಭತ್ತದ ಕಂದು ಚುಕ್ಕೆ ರೋಗ",
+        "pa": "ਭੂਰੇ ਧੱਬਿਆਂ ਦਾ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 5,
+      "crop": "rice",
+      "disease": "sheath_blight",
+      "scientific_name": "Rhizoctonia solani",
+      "display_name": "Rice Sheath Blight",
+      "category": "disease",
+      "language_keys": {
+        "en": "Rice Sheath Blight",
+        "hi": "धान का पर्णच्छद झुलसा",
+        "mr": "भातावरील खोड करपा",
+        "te": "వరి పొడ తెగులు",
+        "ta": "நெல் உறை அழுகல் நோய்",
+        "kn": "ಭತ್ತದ ಹೊದಿಕೆ ಕರಗು ರೋಗ",
+        "pa": "ਤਣੇ ਦਾ ਝੁਲਸ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 6,
+      "crop": "rice",
+      "disease": "healthy",
+      "scientific_name": "Oryza sativa",
+      "display_name": "Healthy Rice Crop",
+      "category": "healthy",
+      "language_keys": {
+        "en": "Healthy Rice",
+        "hi": "स्वस्थ धान फसल",
+        "mr": "निरोगी भात पीक",
+        "te": "ఆరోగ్యకరమైన వరి",
+        "ta": "ஆரோக்கியமான நெல் பயிர்",
+        "kn": "ಆರೋಗ್ಯಕರ ಭತ್ತ",
+        "pa": "ਤੰਦਰੁਸਤ ਝੋਨਾ"
+      }
+    },
+    {
+      "class_id": 7,
+      "crop": "tomato",
+      "disease": "early_blight",
+      "scientific_name": "Alternaria solani",
+      "display_name": "Tomato Early Blight",
+      "category": "disease",
+      "language_keys": {
+        "en": "Tomato Early Blight",
+        "hi": "टमाटर का अगेती झुलसा",
+        "mr": "टोमॅटोवरील अल्टरनेरिया करपा",
+        "te": "టమోటా ముందస్తు మచ్చ తెగులు",
+        "ta": "தக்காளி முன் கருகல் நோய்",
+        "kn": "ಟೊಮೆಟೊ ಆರಂಭಿಕ ಅಂಗಮಾರಿ",
+        "pa": "ਅਗੇਤਾ ਝੁਲਸ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 8,
+      "crop": "tomato",
+      "disease": "late_blight",
+      "scientific_name": "Phytophthora infestans",
+      "display_name": "Tomato Late Blight",
+      "category": "disease",
+      "language_keys": {
+        "en": "Tomato Late Blight",
+        "hi": "टमाटर का पछेती झुलसा",
+        "mr": "टोमॅटोवरील उशिरा येणारा करपा",
+        "te": "టమోటా ఆలస్యపు మచ్చ తెగులు",
+        "ta": "தக்காளி பின் கருகல் நோய்",
+        "kn": "ಟೊಮೆಟೊ ತಡವಾದ ಅಂಗಮಾರಿ",
+        "pa": "ਪਛੇਤਾ ਝੁਲਸ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 9,
+      "crop": "tomato",
+      "disease": "leaf_curl_virus",
+      "scientific_name": "Tomato leaf curl New Delhi virus",
+      "display_name": "Tomato Leaf Curl",
+      "category": "disease",
+      "language_keys": {
+        "en": "Tomato Leaf Curl Virus",
+        "hi": "टमाटर का पर्ण कुंचन (मुरड़) वायरस",
+        "mr": "टोमॅटोवरील चुरडा-मुरडा (लीफ कर्ल)",
+        "te": "టమోటా ఆకు ముడత వైరస్",
+        "ta": "தக்காளி இலைச்சுருள் நச்சுயிரி",
+        "kn": "ಟೊಮೆಟೊ ಎಲೆ ಸುರುಳಿ ವೈರಸ್",
+        "pa": "ਪੱਤਾ ਮਰੋੜ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 10,
+      "crop": "tomato",
+      "disease": "healthy",
+      "scientific_name": "Solanum lycopersicum",
+      "display_name": "Healthy Tomato Plant",
+      "category": "healthy",
+      "language_keys": {
+        "en": "Healthy Tomato",
+        "hi": "स्वस्थ टमाटर पौधा",
+        "mr": "निरोगी टोमॅटो रोप",
+        "te": "ఆరోగ్యకరమైన టమోటా మొక్క",
+        "ta": "ஆரோக்கியமான தக்காளி செடி",
+        "kn": "ಆರೋಗ್ಯಕರ ಟೊಮೆಟೊ ಗಿಡ",
+        "pa": "ਤੰਦਰੁਸਤ ਟਮਾਟਰ"
+      }
+    },
+    {
+      "class_id": 11,
+      "crop": "wheat",
+      "disease": "yellow_rust",
+      "scientific_name": "Puccinia striiformis",
+      "display_name": "Wheat Yellow Rust (Stripe Rust)",
+      "category": "disease",
+      "language_keys": {
+        "en": "Wheat Stripe / Yellow Rust",
+        "hi": "गेहूं का पीला रतुआ (स्ट्राइप रस्ट)",
+        "mr": "गव्हावरील पिवळा तांबेरा",
+        "te": "గోధుమ పసుపు తుప్పు తెగులు",
+        "ta": "கோதுமை மஞ்சள் துரு நோய்",
+        "kn": "ಗೋಧಿ ಹಳದಿ ತುಕ್ಕು ರೋಗ",
+        "pa": "ਕਣਕ ਦਾ ਪੀਲਾ ਰਤੂਆ"
+      }
+    },
+    {
+      "class_id": 12,
+      "crop": "wheat",
+      "disease": "karnal_bunt",
+      "scientific_name": "Tilletia indica",
+      "display_name": "Wheat Karnal Bunt",
+      "category": "disease",
+      "language_keys": {
+        "en": "Wheat Karnal Bunt",
+        "hi": "गेहूं का करनाल बंट रोग",
+        "mr": "गव्हावरील कर्नाल बंट",
+        "te": "గోధుమ కర్నాల్ బంట్ తెగులు",
+        "ta": "கோதுமை கர்னால் பன்ட்",
+        "kn": "ಗೋಧಿ ಕರ್ನಾಲ್ ಬಂಟ್",
+        "pa": "ਕਰਨਾਲ ਬੰਟ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 13,
+      "crop": "sugarcane",
+      "disease": "red_rot",
+      "scientific_name": "Colletotrichum falcatum",
+      "display_name": "Sugarcane Red Rot",
+      "category": "disease",
+      "language_keys": {
+        "en": "Sugarcane Red Rot",
+        "hi": "गन्ने का लाल सड़न रोग (रेड रॉट)",
+        "mr": "उसावरील लाल कूज (तांब्या रोग)",
+        "te": "చెరకు ఎర్ర కుళ్ళు తెగులు",
+        "ta": "கரும்பு செவ்வழுகல் நோய்",
+        "kn": "ಕಬ್ಬಿನ ಕೆಂಪು ಕೊಳೆ ರೋಗ",
+        "pa": "ਗੰਨੇ ਦਾ ਰੱਤਾ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 14,
+      "crop": "soybean",
+      "disease": "asian_soybean_rust",
+      "scientific_name": "Phakopsora pachyrhizi",
+      "display_name": "Asian Soybean Rust",
+      "category": "disease",
+      "language_keys": {
+        "en": "Soybean Rust",
+        "hi": "सोयाबीन गेरूई (रस्ट) रोग",
+        "mr": "सोयाबीनवरील तांबेरा रोग",
+        "te": "సోయాబీన్ తుప్పు తెగులు",
+        "ta": "சோயாபீன் துரு நோய்",
+        "kn": "ಸೋಯಾಬೀನ್ ತುಕ್ಕು ರೋಗ",
+        "pa": "ਸੋਇਆਬੀਨ ਰਤੂਆ"
+      }
+    },
+    {
+      "class_id": 15,
+      "crop": "onion",
+      "disease": "purple_blotch",
+      "scientific_name": "Alternaria porri",
+      "display_name": "Onion Purple Blotch",
+      "category": "disease",
+      "language_keys": {
+        "en": "Onion Purple Blotch",
+        "hi": "प्याज का बैंगनी धब्बा रोग (पर्पल ब्लॉच)",
+        "mr": "कांद्यावरील जांभळा करपा (पर्पल ब्लॉच)",
+        "te": "ఉల్లిపాయ ఊదా మచ్చ తెగులు",
+        "ta": "வெங்காய ஊதா கருகல் நோய்",
+        "kn": "ಈರುಳ್ಳಿ ನೇರಳೆ ಮಚ್ಚೆ ರೋಗ",
+        "pa": "ਗੰਢੇ ਦਾ ਜਾਮਣੀ ਧੱਬਾ"
+      }
+    },
+    {
+      "class_id": 16,
+      "crop": "potato",
+      "disease": "late_blight",
+      "scientific_name": "Phytophthora infestans",
+      "display_name": "Potato Late Blight",
+      "category": "disease",
+      "language_keys": {
+        "en": "Potato Late Blight",
+        "hi": "आलू का पछेती झुलसा",
+        "mr": "बटाट्यावरील उशिरा येणारा करपा",
+        "te": "బంగాళాదుంప లేట్ బ్లైట్ తెగులు",
+        "ta": "உருளைக்கிழங்கு பின் கருகல் நோய்",
+        "kn": "ಆಲೂಗಡ್ಡೆ ತಡವಾದ ಅಂಗಮಾರಿ",
+        "pa": "ਆਲੂ ਦਾ ਪਛੇਤਾ ਝੁਲਸ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 17,
+      "crop": "maize",
+      "disease": "fall_armyworm",
+      "scientific_name": "Spodoptera frugiperda",
+      "display_name": "Maize Fall Armyworm",
+      "category": "pest",
+      "language_keys": {
+        "en": "Fall Armyworm",
+        "hi": "मक्का की फॉल आर्मीवर्म (सैनिक कीट)",
+        "mr": "मक्यावरील लष्करी अळी (फॉल आर्मीवर्म)",
+        "te": "మొక్కజొన్న కత్తెర పురుగు",
+        "ta": "மக்காச்சோள படைப்புழு",
+        "kn": "ಮುಸುಕಿನ ಜೋಳದ ಸೈನಿಕ ಹುಳು",
+        "pa": "ਫਾਲ ਆਰਮੀਵਰਮ"
+      }
+    },
+    {
+      "class_id": 18,
+      "crop": "chili",
+      "disease": "anthracnose_fruit_rot",
+      "scientific_name": "Colletotrichum capsici",
+      "display_name": "Chili Anthracnose Fruit Rot",
+      "category": "disease",
+      "language_keys": {
+        "en": "Chili Anthracnose / Dieback",
+        "hi": "मिर्च का एंथ्रेक्नोज (फल सड़न) रोग",
+        "mr": "मिरचीवरील फळकुज व डायबॅक रोग",
+        "te": "మిరపకాయ ఆంత్రాక్నోస్ తెగులు",
+        "ta": "மிளகாய் ஆந்த்ராக்னோஸ் பழ அழுகல்",
+        "kn": "ಮೆಣಸಿನಕಾಯಿ ಹಣ್ಣು ಕೊಳೆ ರೋಗ",
+        "pa": "ਮਿਰਚ ਦਾ ਫਲ ਗਲਣ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 19,
+      "crop": "banana",
+      "disease": "sigatoka_leaf_spot",
+      "scientific_name": "Pseudocercospora fijiensis",
+      "display_name": "Banana Black Sigatoka",
+      "category": "disease",
+      "language_keys": {
+        "en": "Banana Sigatoka Leaf Spot",
+        "hi": "केले का सिगाटोका पर्ण धब्बा रोग",
+        "mr": "केळीवरील सिगाटोका पानांवरील करपा",
+        "te": "అరటి సిగటోకా ఆకుమచ్చ తెగులు",
+        "ta": "வாழை சிகடோகா இலைப்புள்ளி நோய்",
+        "kn": "ಬಾಳೆ ಸಿಗಾಟೋಕಾ ಎಲೆ ಚುಕ್ಕೆ ರೋಗ",
+        "pa": "ਕੇਲੇ ਦਾ ਸਿਗਾਟੋਕਾ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 20,
+      "crop": "grapes",
+      "disease": "downy_mildew",
+      "scientific_name": "Plasmopara viticola",
+      "display_name": "Grape Downy Mildew",
+      "category": "disease",
+      "language_keys": {
+        "en": "Grape Downy Mildew",
+        "hi": "अंगूर का डाउनी मिल्ड्यू (मृदुरोमिल फफूंदी)",
+        "mr": "द्राक्षांवरील डाऊनी मिल्ड्यू (केवडा रोग)",
+        "te": "ద్రాక్ష డౌనీ బూజు తెగులు",
+        "ta": "திராட்சை டவுனி சாம்பல் நோய்",
+        "kn": "ದ್ರಾಕ್ಷಿ ಬೂದಿ ರೋಗ",
+        "pa": "ਅੰਗੂਰਾਂ ਦਾ ਡਾਊਨੀ ਮਿਲਡਿਊ"
+      }
+    },
+    {
+      "class_id": 21,
+      "crop": "groundnut",
+      "disease": "tikka_leaf_spot",
+      "scientific_name": "Cercospora arachidicola",
+      "display_name": "Groundnut Tikka Leaf Spot",
+      "category": "disease",
+      "language_keys": {
+        "en": "Groundnut Tikka Leaf Spot",
+        "hi": "मूंगफली का टिक्का रोग (पर्ण धब्बा)",
+        "mr": "भुईमुगावरील टिक्का रोग (ठिपके)",
+        "te": "వేరుశెనగ తిక్కా ఆకుమచ్చ తెగులు",
+        "ta": "நிலக்கடலை டிக்கா இலைப்புள்ளி நோய்",
+        "kn": "ಕಡಲೆಕಾಯಿ ಟಿಕ್ಕಾ ಎಲೆ ಚುಕ್ಕೆ ರೋಗ",
+        "pa": "ਮੂੰਗਫਲੀ ਦਾ ਟਿੱਕਾ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 22,
+      "crop": "citrus",
+      "disease": "citrus_canker",
+      "scientific_name": "Xanthomonas axonopodis pv. citri",
+      "display_name": "Citrus Bacterial Canker",
+      "category": "disease",
+      "language_keys": {
+        "en": "Citrus Canker",
+        "hi": "नींबू वर्गीय फलों का कैंकर रोग",
+        "mr": "लिंबूवर्गीय पिकांवरील खैऱ्या रोग (कँकर)",
+        "te": "నిమ్మ గజ్జి తెగులు (కాంకర్)",
+        "ta": "எலுமிச்சை கேங்கர் நோய்",
+        "kn": "ಲಿಂಬೆ ಹುಣ್ಣು ರೋಗ",
+        "pa": "ਨਿੰਬੂ ਦਾ ਕੈਂਕਰ ਰੋਗ"
+      }
+    },
+    {
+      "class_id": 23,
+      "crop": "pomegranate",
+      "disease": "bacterial_blight_oily_spot",
+      "scientific_name": "Xanthomonas axonopodis pv. punicae",
+      "display_name": "Pomegranate Oily Spot (Telya)",
+      "category": "disease",
+      "language_keys": {
+        "en": "Pomegranate Bacterial Blight (Telya)",
+        "hi": "अनार का तेलिया रोग (जीवाणु झुलसा)",
+        "mr": "डाळिंबावरील तेल्या रोग (बॅक्टेरियल ब्लाइट)",
+        "te": "దానిమ్మ నూనె మచ్చ తెగులు",
+        "ta": "மாதுளை எண்ணெய் புள்ளி நோய்",
+        "kn": "ದಾಳಿಂಬೆ ಎಣ್ಣೆ ಮಚ್ಚೆ ರೋಗ (ತೆಲ್ಯಾ)",
+        "pa": "ਅਨਾਰ ਦਾ ਤੇਲੀਆ ਰੋਗ"
+      }
+    }
+  ]
+}

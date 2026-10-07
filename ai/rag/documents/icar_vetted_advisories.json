@@ -1,0 +1,136 @@
+[
+  {
+    "id": "kb-rice-blast-icar-2024",
+    "crop": "rice",
+    "disease": "rice_blast",
+    "pathogen": "Magnaporthe oryzae",
+    "region": "National / Southern & Northern Plains",
+    "languages": ["en", "hi", "mr", "pa", "te"],
+    "source": "ICAR-Indian Institute of Rice Research (IIRR) Hyderabad",
+    "source_date": "2024-03-15",
+    "advisory_type": "biological_and_cultural",
+    "safety_level": "safe_organic",
+    "symptoms": [
+      "Spindle-shaped or eye-shaped lesions with grayish centers and brown borders on leaves",
+      "Neck rot causing panicle breakage and chaffy grains"
+    ],
+    "approved_remedies": [
+      {
+        "type": "biological",
+        "name": "Pseudomonas fluorescens 0.5% WP",
+        "approved_dosage": "10 g/liter or 2.5 kg/ha seed treatment",
+        "application_instructions": "Foliar spray at early tillering and panicle initiation during morning hours."
+      },
+      {
+        "type": "cultural",
+        "name": "Balanced Nitrogen & Aeration",
+        "approved_dosage": "Avoid split nitrogen excess above 120 kg/ha",
+        "application_instructions": "Maintain 5 cm water depth without continuous stagnant inundation. Remove weed hosts on bunds."
+      }
+    ],
+    "waiting_period_days": 0,
+    "contraindications": "Do not spray copper fungicides during flowering/anthesis."
+  },
+  {
+    "id": "kb-cotton-bollworm-cicr-2024",
+    "crop": "cotton",
+    "disease": "pink_bollworm",
+    "pathogen": "Pectinophora gossypiella",
+    "region": "Central & South Zone (Maharashtra, Gujarat, Telangana)",
+    "languages": ["en", "hi", "mr", "te", "gu"],
+    "source": "ICAR-Central Institute for Cotton Research (CICR) Nagpur",
+    "source_date": "2024-04-10",
+    "advisory_type": "pheromone_and_bioagent",
+    "safety_level": "safe_organic",
+    "symptoms": [
+      "Rosetted flowers that fail to open fully",
+      "Bore holes in green bolls plugged with excreta, damaged lint"
+    ],
+    "approved_remedies": [
+      {
+        "type": "pheromone",
+        "name": "Gossyplure Pheromone Traps",
+        "approved_dosage": "5 traps per acre for ETL monitoring; 10-15 traps for mass trapping",
+        "application_instructions": "Install traps 30 cm above canopy height. Replace lure septa every 21 days."
+      },
+      {
+        "type": "biological",
+        "name": "Trichogramma bactrae egg parasitoid",
+        "approved_dosage": "1.5 lakh eggs/ha (Trichocards)",
+        "application_instructions": "Release 3 times at weekly intervals starting 45 days after sowing."
+      },
+      {
+        "type": "botanical",
+        "name": "Neem Oil 1500 ppm",
+        "approved_dosage": "5 ml per liter of water with 1 ml liquid soap",
+        "application_instructions": "Spray during dusk on flower buds to repel egg laying."
+      }
+    ],
+    "waiting_period_days": 3,
+    "contraindications": "Do not apply broad-spectrum pyrethroids early in season as they induce resurgence."
+  },
+  {
+    "id": "kb-sugarcane-red-rot-sbi-2024",
+    "crop": "sugarcane",
+    "disease": "red_rot",
+    "pathogen": "Colletotrichum falcatum",
+    "region": "Subtropical & Tropical India",
+    "languages": ["en", "hi", "mr", "pa"],
+    "source": "ICAR-Sugarcane Breeding Institute (SBI) Coimbatore",
+    "source_date": "2024-02-20",
+    "advisory_type": "cultural_and_prophylactic",
+    "safety_level": "safe_organic",
+    "symptoms": [
+      "Third or fourth leaf from crown loses turgor and withers",
+      "Internal pith shows dark red lesions with diagnostic white cross-bands"
+    ],
+    "approved_remedies": [
+      {
+        "type": "biological",
+        "name": "Trichoderma harzianum soil enrichment",
+        "approved_dosage": "5 kg/acre mixed in 500 kg well-rotted FYM",
+        "application_instructions": "Incorporate at planting and at earthing up to colonize rhizosphere."
+      },
+      {
+        "type": "cultural",
+        "name": "Healthy Sett Selection & Moist Hot Air Treatment (MHAT)",
+        "approved_dosage": "54°C moist air treatment for 2.5 hours",
+        "application_instructions": "Rogue out entire infected clumps with roots and burn outside field. Avoid ratoon of infected crop."
+      }
+    ],
+    "waiting_period_days": 0,
+    "contraindications": "Do not recycle infected irrigation runoff to down-slope fields."
+  },
+  {
+    "id": "kb-tomato-early-blight-iihr-2024",
+    "crop": "tomato",
+    "disease": "early_blight",
+    "pathogen": "Alternaria solani",
+    "region": "All India",
+    "languages": ["en", "hi", "mr", "kn", "ta"],
+    "source": "ICAR-Indian Institute of Horticultural Research (IIHR) Bengaluru",
+    "source_date": "2024-05-02",
+    "advisory_type": "botanical_and_biological",
+    "safety_level": "safe_organic",
+    "symptoms": [
+      "Concentric ring 'target-board' brown/black spots on lower leaves",
+      "Yellow halos around circular lesions progressing upward"
+    ],
+    "approved_remedies": [
+      {
+        "type": "botanical",
+        "name": "Cow urine fermented with Neem and Pongamia leaves (Dashaparni)",
+        "approved_dosage": "200 ml per 10 liters of water",
+        "application_instructions": "Foliar drench underside of leaves every 10 days."
+      },
+      {
+        "type": "biological",
+        "name": "Bacillus subtilis 1% WP",
+        "approved_dosage": "5 g/liter of clean water",
+        "application_instructions": "Spray at first appearance of target spots on lower foliage."
+      }
+    ],
+    "waiting_period_days": 1,
+    "contraindications": "Avoid overhead sprinkler irrigation that splashes soil spores onto foliage."
+  }
+]

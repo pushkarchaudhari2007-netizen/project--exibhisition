@@ -1,0 +1,9 @@
+{
+  "name": "GreenCoach AI",
+  "description": "Voice-first, multilingual, offline-ready AI co-pilot for smallholder farmers providing crop disease diagnosis, eco-friendly treatment advice, heat-stress wellness, and farm fitness gamification.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
